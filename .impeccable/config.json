@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "docs/index.html"
+        ],
+        "createdAt": "2026-10-03T15:19:39.236Z",
+        "reason": "Claude decided: .barra::after is an indeterminate progress bar shown only while a search is running; the motion conveys loading state, it is not scrolling content"
+      }
+    ]
+  }
+}
