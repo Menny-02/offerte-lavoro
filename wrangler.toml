@@ -1,0 +1,9 @@
+# Cloudflare Worker del bottone "Cerca adesso". Pubblica con: npx wrangler deploy
+# Il token GitHub va come secret: npx wrangler secret put GH_TOKEN
+name = "cerca-lavoro"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+REPO = "Menny-02/offerte-lavoro"
+PAGES_ORIGIN = "https://menny-02.github.io"
