@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Offerte di lavoro per te</title>
+<style>
+  :root {
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --border: #d5d9e0;
+    --text: #1d2229;
+    --muted: #4b5563;
+    --accent: #2557a7;
+    --accent-dark: #1b4384;
+    --accent-soft: #e8effa;
+    --ok: #11632f;
+    --ok-soft: #e3f3e8;
+    --warn: #8a4200;
+    --warn-soft: #fff1dc;
+    --info-soft: #eceff3;
+    --radius: 10px;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { font-size: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 1.1875rem/1.5 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  ::selection { background: #cfe0ff; color: var(--text); }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:hover { color: var(--accent-dark); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 1rem; }
+
+  /* testata */
+  header { background: var(--card); border-bottom: 1px solid var(--border); }
+  .testata { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.5rem; }
+  h1 { font-size: 1.65rem; line-height: 1.2; margin: 0; }
+  .sotto { margin: 0.3rem 0 0; color: var(--muted); }
+  .cerca { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
+  .aggiornato { margin: 0; color: var(--muted); font-size: 1rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+    min-height: 3.1rem; padding: 0.7em 1.3em;
+    font: inherit; font-weight: 600; line-height: 1.2; text-decoration: none;
+    border-radius: 8px; border: 2px solid var(--accent); cursor: pointer;
+    transition: background-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
+  }
+  .btn svg { width: 1.05em; height: 1.05em; flex: none; }
+  .btn-primario { background: var(--accent); color: #fff; }
+  .btn-primario:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+  .btn-secondario { background: var(--card); color: var(--accent); }
+  .btn-secondario:hover { background: var(--accent-soft); color: var(--accent-dark); }
+  .btn-testo { background: none; border-color: transparent; color: var(--muted); font-weight: 500; text-decoration: underline; text-underline-offset: 0.18em; padding-inline: 0.6em; }
+  .btn-testo:hover { color: var(--text); }
+  .btn:disabled { opacity: 0.55; cursor: progress; }
+  .btn-grande { font-size: 1.1rem; min-height: 3.4rem; }
+
+  /* stato della ricerca */
+  .stato-ricerca { margin: 1.25rem 0 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid #c9d8f0; }
+  .stato-ricerca[data-tipo="ok"] { background: var(--ok-soft); border-color: #bfe0c9; }
+  .stato-ricerca[data-tipo="errore"] { background: var(--warn-soft); border-color: #f0d3a8; }
+  .stato-ricerca p { margin: 0; }
+  .barra { height: 6px; margin-top: 0.75rem; border-radius: 3px; background: #c9d8f0; overflow: hidden; }
+  .barra::after { content: ""; display: block; width: 35%; height: 100%; background: var(--accent); border-radius: 3px; animation: scorri 1.6s cubic-bezier(.65,0,.35,1) infinite; }
+  @keyframes scorri { from { transform: translateX(-100%); } to { transform: translateX(290%); } }
+
+  /* schede */
+  nav.schede { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-top: 1.75rem; border-bottom: 1px solid var(--border); }
+  .scheda {
+    font: inherit; font-weight: 600; color: var(--muted); background: none; border: 0; cursor: pointer;
+    padding: 0.6rem 0.1rem 0.7rem; margin-bottom: -1px; border-bottom: 3px solid transparent;
+  }
+  .scheda:hover { color: var(--text); }
+  .scheda[aria-pressed="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .conta { font-weight: 500; }
+
+  main { padding-bottom: 3rem; }
+  .elenco { display: grid; gap: 1rem; margin-top: 1.25rem; }
+  .vuoto { margin-top: 1.25rem; padding: 2rem 1.5rem; background: var(--card); border: 1px dashed var(--border); border-radius: var(--radius); }
+  .vuoto h2 { font-size: 1.3rem; margin: 0 0 0.4rem; }
+  .vuoto p { margin: 0; color: var(--muted); }
+
+  /* annuncio */
+  .annuncio {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1.25rem 1.5rem 1.35rem;
+    transition: box-shadow 200ms ease-out, opacity 200ms ease-out, transform 200ms ease-out;
+  }
+  .annuncio:hover { box-shadow: 0 3px 12px rgba(29, 34, 41, 0.08); }
+  .annuncio.via { opacity: 0; transform: translateY(-6px); }
+  .etichette { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.55rem; }
+  .chip { display: inline-block; font-size: 0.875rem; font-weight: 600; line-height: 1.3; padding: 0.2em 0.65em; border-radius: 999px; background: var(--info-soft); color: #374151; }
+  .chip.ottimo { background: var(--ok-soft); color: var(--ok); }
+  .chip.buono { background: var(--accent-soft); color: var(--accent-dark); }
+  .chip.nuovo { background: var(--accent); color: #fff; }
+  .chip.avviso { background: var(--warn-soft); color: var(--warn); }
+  .annuncio h3 { font-size: 1.35rem; line-height: 1.3; margin: 0; }
+  .annuncio h3 a { color: var(--text); text-decoration: none; }
+  .annuncio h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .dove { margin: 0.3rem 0 0; color: var(--muted); font-size: 1.05rem; }
+  .dove strong { color: var(--text); font-weight: 600; }
+  .perche { margin: 0.8rem 0 0; }
+  .perche.senza { color: var(--muted); font-style: italic; }
+  details.testo { margin-top: 0.7rem; }
+  details.testo summary { cursor: pointer; color: var(--accent); font-weight: 500; width: fit-content; }
+  details.testo summary:hover { color: var(--accent-dark); }
+  details.testo div { margin-top: 0.6rem; padding: 0.9rem 1rem; background: var(--bg); border-radius: 8px; white-space: pre-wrap; font-size: 1.05rem; max-height: 22rem; overflow: auto; }
+  .azioni { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.75rem; margin-top: 1.1rem; }
+  .segno { margin: 0.8rem 0 0; font-weight: 600; color: var(--ok); }
+  .segno.scartato { color: var(--muted); }
+
+  details.altri { margin-top: 2rem; }
+  details.altri > summary { cursor: pointer; font-weight: 600; color: var(--accent); padding: 0.5rem 0; width: fit-content; }
+  details.altri > p { margin: 0.2rem 0 0; color: var(--muted); }
+
+  /* caricamento */
+  .scheletro { height: 11rem; border-radius: var(--radius); background: linear-gradient(90deg, #e6e9ee 25%, #f0f2f5 50%, #e6e9ee 75%) 0 0 / 200% 100%; animation: luccica 1.4s linear infinite; }
+  @keyframes luccica { to { background-position: -200% 0; } }
+
+  footer { border-top: 1px solid var(--border); padding-block: 1.5rem 2.5rem; color: var(--muted); font-size: 0.95rem; }
+  footer p { margin: 0.3rem 0; }
+
+  /* avviso "Annulla" */
+  .toast {
+    position: fixed; left: 50%; bottom: 1.5rem; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 1rem; max-width: calc(100% - 2rem);
+    padding: 0.85rem 1.1rem 0.85rem 1.3rem; border-radius: var(--radius);
+    background: #1d2229; color: #fff; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  }
+  .toast[hidden] { display: none; }
+  .toast button { font: inherit; font-weight: 600; color: #a9c7ff; background: none; border: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 0.18em; padding: 0.3rem; }
+  .toast button:focus-visible { outline-color: #a9c7ff; }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+  @media (max-width: 640px) {
+    .cerca { align-items: stretch; width: 100%; }
+    .btn-grande { width: 100%; }
+    .annuncio { padding: 1.1rem 1.1rem 1.2rem; }
+    .azioni .btn { flex: 1 1 auto; }
+    nav.schede { flex-direction: column; gap: 0.25rem; border-bottom: 0; }
+    .scheda { text-align: left; padding: 0.6rem 0.9rem; border-bottom: 0; border-radius: 8px; }
+    .scheda[aria-pressed="true"] { background: var(--accent-soft); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap testata">
+    <div>
+      <h1>Offerte di lavoro per te</h1>
+      <p class="sotto">Provincia di Treviso · uffici, ordini, acquisti, clienti</p>
+    </div>
+    <div class="cerca">
+      <p class="aggiornato" id="aggiornato">Sto caricando gli annunci…</p>
+      <button class="btn btn-primario btn-grande" id="btn-cerca" type="button" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        Cerca nuovi annunci adesso
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="stato-ricerca" role="status" aria-live="polite"></div>
+
+  <nav class="schede" aria-label="Elenchi">
+    <button class="scheda" type="button" data-scheda="da-vedere" aria-pressed="true">Da vedere <span class="conta" id="n-da-vedere"></span></button>
+    <button class="scheda" type="button" data-scheda="candidata" aria-pressed="false">Mi sono candidata <span class="conta" id="n-candidata"></span></button>
+    <button class="scheda" type="button" data-scheda="scartato" aria-pressed="false">Non mi interessano <span class="conta" id="n-scartato"></span></button>
+  </nav>
+
+  <div id="contenuto">
+    <div class="elenco" aria-hidden="true"><div class="scheletro"></div><div class="scheletro"></div><div class="scheletro"></div></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Gli annunci che segni come "candidata" o "non mi interessa" restano salvati su questo computer.</p>
+    <p id="fonti"></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <span id="toast-testo"></span>
+  <button type="button" id="toast-annulla">Annulla</button>
+</div>
+
+<script>
+// Indirizzo del Cloudflare Worker che avvia la ricerca (vuoto = bottone nascosto).
+const WORKER = "";
+
+const $ = (s) => document.querySelector(s);
+const salvati = {
+  leggi(k, base) { try { return JSON.parse(localStorage.getItem(k)) ?? base; } catch { return base; } },
+  scrivi(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+const ICONA_ESTERNA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+
+let dati = null;
+let scheda = "da-vedere";
+let stati = salvati.leggi("stati", {});   // id -> { s: "candidata" | "scartato", d: "2026-10-03" }
+let nuovi = new Set();
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const link = (u) => /^https?:\/\//i.test(u || "") ? u : "#";
+const giorno = (d) => d.toLocaleDateString("it-IT", { day: "numeric", month: "long" });
+
+function quando(iso) {
+  const d = new Date(iso);
+  const ora = d.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+  if (d.toDateString() === new Date().toDateString()) return `oggi alle ${ora}`;
+  if (d.toDateString() === new Date(Date.now() - 864e5).toDateString()) return `ieri alle ${ora}`;
+  return `il ${giorno(d)} alle ${ora}`;
+}
+
+function pubblicato(data) {
+  if (!/^\d{4}-\d\d-\d\d/.test(data || "")) return "";
+  const d = new Date(data.slice(0, 10) + "T00:00");
+  const giorni = Math.round((new Date(new Date().toDateString()) - d) / 864e5);
+  if (giorni <= 0) return "pubblicato oggi";
+  if (giorni === 1) return "pubblicato ieri";
+  if (giorni < 7) return `pubblicato ${giorni} giorni fa`;
+  return `pubblicato il ${giorno(d)}`;
+}
+
+function comune(luogo) {
+  let c = (luogo || "").split(",")[0].replace(/\(.*?\)/g, "").trim();
+  if (/greater .*area/i.test(c)) return "Zona di Treviso";
+  if (c && c === c.toUpperCase()) {
+    c = c.toLowerCase().replace(/(^|\s)(\p{L})/gu, (m, sp, ch) => sp + ch.toUpperCase())
+         .replace(/ (Di|Del|Della|Sul|Al|E) /g, (m) => m.toLowerCase());
+  }
+  return c;
+}
+
+function titolo(t) {
+  t = (t || "").replace(/^\s*\|\s*|\s*\|\s*$/g, "").trim();
+  const lettere = t.replace(/[^\p{L}]/gu, "");
+  const maiuscole = lettere.replace(/[^\p{Lu}]/gu, "").length;
+  // titoli "urlati" (quasi tutto maiuscolo) diventano normali: si leggono meglio
+  return lettere.length > 4 && maiuscole / lettere.length > 0.7 ? t.charAt(0) + t.slice(1).toLowerCase() : t;
+}
+
+function giudizio(a) {
+  if (!a.punteggio_ai) return ["Da valutare", ""];
+  if (a.punteggio >= 75) return ["Molto adatto", "ottimo"];
+  if (a.punteggio >= 55) return ["Adatto", "buono"];
+  return ["Forse", ""];
+}
+
+function scheda_annuncio(a) {
+  const [g, cls] = giudizio(a);
+  const stato = stati[a.id];
+  const dove = [a.azienda && `<strong>${esc(a.azienda)}</strong>`, esc(comune(a.luogo)), pubblicato(a.data), `da ${esc(a.fonte)}`].filter(Boolean).join(" · ");
+  const perche = a.motivo
+    ? `<p class="perche"><strong>Perché:</strong> ${esc(a.motivo)}</p>`
+    : `<p class="perche senza">Valutazione automatica non disponibile: leggi l'annuncio per decidere.</p>`;
+  const etichette = [
+    `<span class="chip ${cls}">${g}</span>`,
+    nuovi.has(a.id) && !stato ? `<span class="chip nuovo">Nuovo</span>` : "",
+    a.richiede_inglese ? `<span class="chip avviso">Chiede inglese buono</span>` : "",
+    a.protette ? `<span class="chip">Categorie protette (L. 68/99)</span>` : "",
+  ].join("");
+  const apri = `<a class="btn btn-primario" href="${esc(link(a.url))}" target="_blank" rel="noopener">Apri l'annuncio ${ICONA_ESTERNA}</a>`;
+  const azioni = !stato
+    ? `${apri}
+       <button class="btn btn-secondario" type="button" data-azione="candidata" data-id="${esc(a.id)}">Mi sono candidata</button>
+       <button class="btn btn-testo" type="button" data-azione="scartato" data-id="${esc(a.id)}">Non mi interessa</button>`
+    : `${apri}
+       <button class="btn btn-testo" type="button" data-azione="ripristina" data-id="${esc(a.id)}">Rimetti tra "Da vedere"</button>`;
+  const segno = stato
+    ? `<p class="segno ${stato.s === "scartato" ? "scartato" : ""}">${stato.s === "candidata" ? "Ti sei candidata" : "Segnato come non interessante"} il ${giorno(new Date(stato.d + "T00:00"))}</p>`
+    : "";
+  const testo = a.testo ? `<details class="testo"><summary>Leggi la descrizione qui</summary><div>${esc(a.testo)}</div></details>` : "";
+  return `<article class="annuncio" data-id="${esc(a.id)}">
+    <div class="etichette">${etichette}</div>
+    <h3><a href="${esc(link(a.url))}" target="_blank" rel="noopener">${esc(titolo(a.titolo))}</a></h3>
+    <p class="dove">${dove}</p>
+    ${perche}${segno}${testo}
+    <div class="azioni">${azioni}</div>
+  </article>`;
+}
+
+const VUOTI = {
+  "da-vedere": ["Hai visto tutti gli annunci", "Ogni mattina parte una nuova ricerca da sola. Se vuoi, premi \"Cerca nuovi annunci adesso\"."],
+  "candidata": ["Qui troverai gli annunci a cui ti sei candidata", "Quando invii il curriculum, premi \"Mi sono candidata\" sull'annuncio: lo ritroverai qui con la data."],
+  "scartato": ["Nessun annuncio scartato", "Se un annuncio non ti interessa, premi \"Non mi interessa\": sparirà dall'elenco principale e lo ritroverai qui."],
+};
+
+function disegna() {
+  const tutti = dati.annunci;
+  const per = { "da-vedere": [], "candidata": [], "scartato": [] };
+  for (const a of tutti) per[stati[a.id]?.s || "da-vedere"].push(a);
+  for (const k in per) $(`#n-${k}`).textContent = `(${per[k].length})`;
+  for (const k of ["candidata", "scartato"]) per[k].sort((x, y) => stati[y.id].d.localeCompare(stati[x.id].d));
+  document.querySelectorAll(".scheda").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.scheda === scheda)));
+
+  const lista = per[scheda];
+  let html;
+  if (!lista.length) {
+    const [t, p] = VUOTI[scheda];
+    html = `<div class="vuoto"><h2>${t}</h2><p>${p}</p></div>`;
+  } else if (scheda === "da-vedere") {
+    const buoni = lista.filter((a) => a.punteggio >= 40);
+    const altri = lista.filter((a) => a.punteggio < 40);
+    html = `<h2 class="visually-hidden">Annunci da vedere</h2><div class="elenco">${buoni.map(scheda_annuncio).join("")}</div>`;
+    if (!buoni.length) html = `<div class="vuoto"><h2>Nessun annuncio molto adatto per ora</h2><p>Qui sotto trovi quelli meno adatti, nel caso uno ti incuriosisca.</p></div>`;
+    if (altri.length) html += `<details class="altri"><summary>Altri annunci meno adatti (${altri.length})</summary><p>Probabilmente non fanno per te, ma puoi dare un'occhiata.</p><div class="elenco">${altri.map(scheda_annuncio).join("")}</div></details>`;
+  } else {
+    html = `<div class="elenco">${lista.map(scheda_annuncio).join("")}</div>`;
+  }
+  $("#contenuto").innerHTML = html;
+  $("#aggiornato").textContent = `Annunci aggiornati ${quando(dati.aggiornato)}`;
+  $("#fonti").textContent = "Fonti dell'ultima ricerca: " + Object.entries(dati.fonti || {})
+    .map(([n, s]) => `${n} ${s.startsWith("ok") ? "ok (" + s.slice(3) + ")" : "non raggiungibile"}`).join(" · ");
+}
+
+async function carica() {
+  const r = await fetch("annunci.json?t=" + Date.now(), { cache: "no-store" });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  dati = await r.json();
+  const visti = new Set(salvati.leggi("visti", []));
+  nuovi = new Set(visti.size ? dati.annunci.filter((a) => !visti.has(a.id)).map((a) => a.id) : []);
+  salvati.scrivi("visti", dati.annunci.map((a) => a.id));
+  disegna();
+}
+
+// segna / annulla
+let annulla = null, timerToast = 0;
+function segna(id, s) {
+  const prima = stati[id];
+  if (s === "ripristina") delete stati[id];
+  else stati[id] = { s, d: new Date().toLocaleDateString("sv") };
+  salvati.scrivi("stati", stati);
+  const card = document.querySelector(`.annuncio[data-id="${CSS.escape(id)}"]`);
+  const fatto = () => {
+    disegna();
+    const msg = s === "candidata" ? "Spostato in \"Mi sono candidata\"." : s === "scartato" ? "Spostato in \"Non mi interessano\"." : "Rimesso tra \"Da vedere\".";
+    annulla = () => { if (prima) stati[id] = prima; else delete stati[id]; salvati.scrivi("stati", stati); disegna(); };
+    $("#toast-testo").textContent = msg;
+    $("#toast").hidden = false;
+    clearTimeout(timerToast);
+    timerToast = setTimeout(() => { $("#toast").hidden = true; annulla = null; }, 8000);
+  };
+  if (card && !matchMedia("(prefers-reduced-motion: reduce)").matches) { card.classList.add("via"); setTimeout(fatto, 200); }
+  else fatto();
+}
+$("#toast-annulla").addEventListener("click", () => { annulla?.(); annulla = null; $("#toast").hidden = true; });
+$("#contenuto").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-azione]");
+  if (b) segna(b.dataset.id, b.dataset.azione);
+});
+document.querySelectorAll(".scheda").forEach((b) => b.addEventListener("click", () => { scheda = b.dataset.scheda; if (dati) disegna(); }));
+
+// ricerca su richiesta (Cloudflare Worker -> GitHub Actions)
+const avviso = (tipo, testo, barra = false) => {
+  $("#stato-ricerca").innerHTML = testo ? `<div class="stato-ricerca" data-tipo="${tipo}"><p>${testo}</p>${barra ? '<div class="barra"></div>' : ""}</div>` : "";
+};
+async function statoRicerca() {
+  const r = await fetch(WORKER + "/stato", { cache: "no-store" });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  return r.json();   // { id, stato: "in_corso" | "pronta", esito }
+}
+async function aspetta(prima) {
+  const btn = $("#btn-cerca");
+  btn.disabled = true;
+  avviso("info", "<strong>Sto cercando nuovi annunci…</strong> Ci vogliono circa 5 minuti. Puoi lasciare aperta questa pagina: si aggiorna da sola.", true);
+  const fine = Date.now() + 20 * 60e3;
+  while (Date.now() < fine) {
+    await new Promise((ok) => setTimeout(ok, 15000));
+    let s;
+    try { s = await statoRicerca(); } catch { continue; }
+    if (s.stato === "pronta" && (s.id !== prima.id || prima.stato !== "pronta")) {
+      const vecchi = new Set((dati?.annunci || []).map((a) => a.id));
+      try { await carica(); } catch {}
+      const n = (dati?.annunci || []).filter((a) => !vecchi.has(a.id)).length;
+      if (s.esito !== "success") avviso("errore", "La ricerca non è riuscita del tutto. Gli annunci qui sotto sono quelli trovati finora: riprova più tardi.");
+      else if (n) avviso("ok", `<strong>Fatto!</strong> Ho trovato ${n === 1 ? "1 annuncio nuovo" : n + " annunci nuovi"}, li vedi con l'etichetta "Nuovo".`);
+      else avviso("ok", "<strong>Fatto!</strong> Per ora non ci sono annunci nuovi. Riprova domani.");
+      btn.disabled = false;
+      return;
+    }
+  }
+  avviso("errore", "La ricerca ci sta mettendo più del solito. Riprova più tardi.");
+  btn.disabled = false;
+}
+async function cerca() {
+  $("#btn-cerca").disabled = true;
+  try {
+    const prima = await statoRicerca();
+    if (prima.stato !== "in_corso") {
+      const r = await fetch(WORKER + "/cerca", { method: "POST" });
+      if (!r.ok && r.status !== 409) throw new Error("HTTP " + r.status);
+    }
+    await aspetta(prima);
+  } catch {
+    avviso("errore", "Non sono riuscita ad avviare la ricerca. Controlla la connessione a internet e riprova tra qualche minuto.");
+    $("#btn-cerca").disabled = false;
+  }
+}
+
+(async () => {
+  try { await carica(); }
+  catch {
+    $("#contenuto").innerHTML = '<div class="vuoto"><h2>Non riesco a caricare gli annunci</h2><p>Controlla la connessione a internet e ricarica la pagina (tasto F5).</p></div>';
+    $("#aggiornato").textContent = "";
+  }
+  if (WORKER) {
+    $("#btn-cerca").hidden = false;
+    $("#btn-cerca").addEventListener("click", cerca);
+    try { const s = await statoRicerca(); if (s.stato === "in_corso") aspetta(s); } catch {}
+  }
+})();
+</script>
+</body>
+</html>
