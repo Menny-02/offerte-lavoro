@@ -44,7 +44,6 @@
   .testata { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.5rem; }
   h1 { font-size: 1.65rem; line-height: 1.2; margin: 0; }
   .sotto { margin: 0.3rem 0 0; color: var(--muted); }
-  .cerca { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
   .aggiornato { margin: 0; color: var(--muted); font-size: 1rem; }
 
   .btn {
@@ -62,16 +61,7 @@
   .btn-testo { background: none; border-color: transparent; color: var(--muted); font-weight: 500; text-decoration: underline; text-underline-offset: 0.18em; padding-inline: 0.6em; }
   .btn-testo:hover { color: var(--text); }
   .btn:disabled { opacity: 0.55; cursor: progress; }
-  .btn-grande { font-size: 1.1rem; min-height: 3.4rem; }
 
-  /* stato della ricerca */
-  .stato-ricerca { margin: 1.25rem 0 0; padding: 1rem 1.25rem; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid #c9d8f0; }
-  .stato-ricerca[data-tipo="ok"] { background: var(--ok-soft); border-color: #bfe0c9; }
-  .stato-ricerca[data-tipo="errore"] { background: var(--warn-soft); border-color: #f0d3a8; }
-  .stato-ricerca p { margin: 0; }
-  .barra { height: 6px; margin-top: 0.75rem; border-radius: 3px; background: #c9d8f0; overflow: hidden; }
-  .barra::after { content: ""; display: block; width: 35%; height: 100%; background: var(--accent); border-radius: 3px; animation: scorri 1.6s cubic-bezier(.65,0,.35,1) infinite; }
-  @keyframes scorri { from { transform: translateX(-100%); } to { transform: translateX(290%); } }
 
   /* schede */
   nav.schede { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-top: 1.75rem; border-bottom: 1px solid var(--border); }
@@ -143,8 +133,6 @@
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
   @media (max-width: 640px) {
-    .cerca { align-items: stretch; width: 100%; }
-    .btn-grande { width: 100%; }
     .annuncio { padding: 1.1rem 1.1rem 1.2rem; }
     .azioni .btn { flex: 1 1 auto; }
     nav.schede { flex-direction: column; gap: 0.25rem; border-bottom: 0; }
@@ -163,19 +151,11 @@
       <h1>Offerte di lavoro per te</h1>
       <p class="sotto">Provincia di Treviso · uffici, ordini, acquisti, clienti</p>
     </div>
-    <div class="cerca">
-      <p class="aggiornato" id="aggiornato">Sto caricando gli annunci…</p>
-      <button class="btn btn-primario btn-grande" id="btn-cerca" type="button" hidden>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-        Cerca nuovi annunci adesso
-      </button>
-    </div>
+    <p class="aggiornato" id="aggiornato">Sto caricando gli annunci…</p>
   </div>
 </header>
 
 <main class="wrap">
-  <div id="stato-ricerca" role="status" aria-live="polite"></div>
-
   <nav class="schede" aria-label="Elenchi">
     <button class="scheda" type="button" data-scheda="da-vedere" aria-pressed="true">Da vedere <span class="conta" id="n-da-vedere"></span></button>
     <button class="scheda" type="button" data-scheda="candidata" aria-pressed="false">Mi sono candidata <span class="conta" id="n-candidata"></span></button>
@@ -200,9 +180,6 @@
 </div>
 
 <script>
-// Indirizzo del Cloudflare Worker che avvia la ricerca (vuoto = bottone nascosto).
-const WORKER = "";
-
 const $ = (s) => document.querySelector(s);
 const salvati = {
   leggi(k, base) { try { return JSON.parse(localStorage.getItem(k)) ?? base; } catch { return base; } },
@@ -296,7 +273,7 @@ function scheda_annuncio(a) {
 }
 
 const VUOTI = {
-  "da-vedere": ["Hai visto tutti gli annunci", "Ogni mattina parte una nuova ricerca da sola. Se vuoi, premi \"Cerca nuovi annunci adesso\"."],
+  "da-vedere": ["Hai visto tutti gli annunci", "Ogni mattina parte da sola una nuova ricerca: torna domani per vedere gli annunci nuovi."],
   "candidata": ["Qui troverai gli annunci a cui ti sei candidata", "Quando invii il curriculum, premi \"Mi sono candidata\" sull'annuncio: lo ritroverai qui con la data."],
   "scartato": ["Nessun annuncio scartato", "Se un annuncio non ti interessa, premi \"Non mi interessa\": sparirà dall'elenco principale e lo ritroverai qui."],
 };
@@ -324,7 +301,7 @@ function disegna() {
     html = `<div class="elenco">${lista.map(scheda_annuncio).join("")}</div>`;
   }
   $("#contenuto").innerHTML = html;
-  $("#aggiornato").textContent = `Annunci aggiornati ${quando(dati.aggiornato)}`;
+  $("#aggiornato").textContent = `Annunci aggiornati ${quando(dati.aggiornato)}. Si aggiornano da soli ogni mattina.`;
   $("#fonti").textContent = "Fonti dell'ultima ricerca: " + Object.entries(dati.fonti || {})
     .map(([n, s]) => `${n} ${s.startsWith("ok") ? "ok (" + s.slice(3) + ")" : "non raggiungibile"}`).join(" · ");
 }
@@ -366,63 +343,11 @@ $("#contenuto").addEventListener("click", (e) => {
 });
 document.querySelectorAll(".scheda").forEach((b) => b.addEventListener("click", () => { scheda = b.dataset.scheda; if (dati) disegna(); }));
 
-// ricerca su richiesta (Cloudflare Worker -> GitHub Actions)
-const avviso = (tipo, testo, barra = false) => {
-  $("#stato-ricerca").innerHTML = testo ? `<div class="stato-ricerca" data-tipo="${tipo}"><p>${testo}</p>${barra ? '<div class="barra"></div>' : ""}</div>` : "";
-};
-async function statoRicerca() {
-  const r = await fetch(WORKER + "/stato", { cache: "no-store" });
-  if (!r.ok) throw new Error("HTTP " + r.status);
-  return r.json();   // { id, stato: "in_corso" | "pronta", esito }
-}
-async function aspetta(prima) {
-  const btn = $("#btn-cerca");
-  btn.disabled = true;
-  avviso("info", "<strong>Sto cercando nuovi annunci…</strong> Ci vogliono circa 5 minuti. Puoi lasciare aperta questa pagina: si aggiorna da sola.", true);
-  const fine = Date.now() + 20 * 60e3;
-  while (Date.now() < fine) {
-    await new Promise((ok) => setTimeout(ok, 15000));
-    let s;
-    try { s = await statoRicerca(); } catch { continue; }
-    if (s.stato === "pronta" && (s.id !== prima.id || prima.stato !== "pronta")) {
-      const vecchi = new Set((dati?.annunci || []).map((a) => a.id));
-      try { await carica(); } catch {}
-      const n = (dati?.annunci || []).filter((a) => !vecchi.has(a.id)).length;
-      if (s.esito !== "success") avviso("errore", "La ricerca non è riuscita del tutto. Gli annunci qui sotto sono quelli trovati finora: riprova più tardi.");
-      else if (n) avviso("ok", `<strong>Fatto!</strong> Ho trovato ${n === 1 ? "1 annuncio nuovo" : n + " annunci nuovi"}, li vedi con l'etichetta "Nuovo".`);
-      else avviso("ok", "<strong>Fatto!</strong> Per ora non ci sono annunci nuovi. Riprova domani.");
-      btn.disabled = false;
-      return;
-    }
-  }
-  avviso("errore", "La ricerca ci sta mettendo più del solito. Riprova più tardi.");
-  btn.disabled = false;
-}
-async function cerca() {
-  $("#btn-cerca").disabled = true;
-  try {
-    const prima = await statoRicerca();
-    if (prima.stato !== "in_corso") {
-      const r = await fetch(WORKER + "/cerca", { method: "POST" });
-      if (!r.ok && r.status !== 409) throw new Error("HTTP " + r.status);
-    }
-    await aspetta(prima);
-  } catch {
-    avviso("errore", "Non sono riuscita ad avviare la ricerca. Controlla la connessione a internet e riprova tra qualche minuto.");
-    $("#btn-cerca").disabled = false;
-  }
-}
-
 (async () => {
   try { await carica(); }
   catch {
     $("#contenuto").innerHTML = '<div class="vuoto"><h2>Non riesco a caricare gli annunci</h2><p>Controlla la connessione a internet e ricarica la pagina (tasto F5).</p></div>';
     $("#aggiornato").textContent = "";
-  }
-  if (WORKER) {
-    $("#btn-cerca").hidden = false;
-    $("#btn-cerca").addEventListener("click", cerca);
-    try { const s = await statoRicerca(); if (s.stato === "in_corso") aspetta(s); } catch {}
   }
 })();
 </script>

@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS/JS, no framework: one `docs/index.html` served by GitHub Pages, data from `docs/annunci.json` written by a GitHub Actions job (`cerca.py`). A free Cloudflare Worker starts a new search on demand. Zero running cost is a hard constraint.
+Static HTML/CSS/JS, no framework: one `docs/index.html` served by GitHub Pages, data from `docs/annunci.json` written by a GitHub Actions job (`cerca.py`). Zero running cost is a hard constraint.
 
 ## Users
 
@@ -21,7 +21,7 @@ Gather job ads from LinkedIn, Indeed, ClicLavoro Veneto (Centri per l'Impiego) a
 ## Operating Context
 
 - Opened in a desktop browser, possibly with browser zoom raised.
-- A search runs automatically every morning; she can also press one button to search now (results arrive after a few minutes).
+- A search runs automatically every morning; there is no search button (the user removed it as unnecessary).
 - Applying happens on the original site, in a new tab.
 
 ## Capabilities and Constraints
@@ -37,7 +37,7 @@ Real ads in `docs/annunci.json`. No testimonials, no claims beyond what the data
 
 ## Product Principles
 
-- She never has to understand how it works: one page, one button, plain words.
+- She never has to understand how it works: one page, plain words, nothing to configure.
 - Every ad answers "is it worth my time?" before she clicks.
 - Nothing she marks gets lost or shown again by surprise.
 - Honest about uncertainty: say when the AI could not judge an ad, or when a search failed.

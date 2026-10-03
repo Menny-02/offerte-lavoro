@@ -3,7 +3,7 @@ name: cerca
 on:
   schedule:
     - cron: "0 5 * * *"   # ogni mattina: 7:00 con l'ora legale, 6:00 d'inverno
-  workflow_dispatch:      # bottone "Cerca adesso" (tramite il Worker) o a mano da GitHub
+  workflow_dispatch:      # a mano da GitHub: Actions -> cerca -> Run workflow
 
 permissions:
   contents: write

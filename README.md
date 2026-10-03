@@ -2,7 +2,7 @@
 
 Pagina: https://menny-02.github.io/offerte-lavoro/
 
-Ogni mattina (e quando si preme "Cerca nuovi annunci adesso") GitHub Actions esegue `cerca.py`:
+Ogni mattina GitHub Actions esegue `cerca.py` (si può lanciare anche a mano: Actions → cerca → Run workflow):
 raccoglie annunci d'ufficio da LinkedIn, Indeed, ClicLavoro Veneto e Subito, tiene solo la
 provincia di Treviso, li valuta con un LLM gratuito (Groq) e pubblica `docs/` su GitHub Pages.
 
@@ -13,13 +13,6 @@ provincia di Treviso, li valuta con un LLM gratuito (Groq) e pubblica `docs/` su
    Per cambiare fornitore basta impostare le *variables* `LLM_BASE_URL` e `LLM_MODEL`
    (es. Gemini: `https://generativelanguage.googleapis.com/v1beta/openai` e `gemini-2.5-flash`).
    Senza chiave il sito funziona lo stesso, con un punteggio a parole chiave.
-2. **Bottone "Cerca adesso"**:
-   - crea un token *fine-grained* (GitHub → Settings → Developer settings → Fine-grained tokens):
-     solo il repo `offerte-lavoro`, permesso **Actions: Read and write**;
-   - su https://dash.cloudflare.com crea un Worker, incolla `worker.js`, poi in Settings → Variables:
-     `REPO` = `Menny-02/offerte-lavoro`, `PAGES_ORIGIN` = `https://menny-02.github.io`,
-     secret `GH_TOKEN` = il token;
-   - metti l'indirizzo del Worker nella costante `WORKER` in `docs/index.html`.
 
 ## Manutenzione
 

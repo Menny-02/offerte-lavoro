@@ -285,7 +285,9 @@ def main():
             time.sleep(1)
     in_tv = [a for a in nuovi.values() if in_provincia(a["luogo"], a["titolo"] + " " + a["testo"], tv, altri)]
 
-    annunci = unisci(stato["annunci"], in_tv, oggi)
+    # il filtro rigira anche sui vecchi: se migliora, ripulisce lo storico
+    annunci = [a for a in unisci(stato["annunci"], in_tv, oggi)
+               if in_provincia(a["luogo"], a["titolo"] + " " + (a.get("testo") or ""), tv, altri)]
     for a in annunci:
         a["protette"] = flag_protette(a)
     try:
