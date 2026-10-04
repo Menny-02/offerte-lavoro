@@ -16,7 +16,7 @@ One person: a woman in her late fifties in the province of Treviso, looking for 
 
 ## Product Purpose
 
-Gather job ads from LinkedIn, Indeed, ClicLavoro Veneto (Centri per l'Impiego) and Subito, keep only those in the province of Treviso, rank them against her profile with a short plain-Italian reason, and let her open each ad and mark it "Mi sono candidata" or "Non mi interessa". Success: she sends more, better-targeted applications without having to search site by site.
+Gather job ads from LinkedIn, Indeed, ClicLavoro Veneto (Centri per l'Impiego) and Subito, keep only those within 15 km of Treviso, rank them against her profile with a short plain-Italian reason, and let her open each ad and mark it "Mi sono candidata" or "Non mi interessa". Success: she sends more, better-targeted applications without having to search site by site.
 
 ## Operating Context
 

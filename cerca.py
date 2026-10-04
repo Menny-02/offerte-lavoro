@@ -1,8 +1,9 @@
-"""Raccoglie annunci d'ufficio in provincia di Treviso, li valuta con un LLM gratuito
+"""Raccoglie annunci d'ufficio entro RAGGIO_KM da Treviso, li valuta con un LLM gratuito
 e scrive docs/annunci.json per la pagina. Uso: python cerca.py
 Env opzionali: LLM_API_KEY (senza, punteggio a parole chiave), LLM_BASE_URL, LLM_MODEL."""
 import html
 import json
+import math
 import os
 import re
 import sys
@@ -16,6 +17,8 @@ from curl_cffi import requests
 QUI = Path(__file__).parent
 FILE_DATI = QUI / "docs" / "annunci.json"
 GIORNI = 30  # annunci pubblicati da più di così spariscono
+CENTRO = (45.6658, 12.2456)  # Treviso
+RAGGIO_KM = 15  # annunci più lontani di così dal centro di Treviso spariscono
 WEB = requests.Session(impersonate="chrome")  # finge Chrome: Subito blocca i client Python normali
 
 # LinkedIn e Indeed accettano OR: poche ricerche = meno rischio di blocco
@@ -77,21 +80,23 @@ def primo(luogo):
 
 
 def carica_comuni():
-    tv, altri = set(), set()
+    """nome normalizzato -> km in linea d'aria dal centro di Treviso"""
+    km = {}
     for riga in (QUI / "comuni.txt").read_text(encoding="utf-8").splitlines():
-        nome, sigla = riga.rsplit(";", 1)
-        (tv if sigla == "TV" else altri).add(norm(nome))
-    return tv, altri
+        nome, lat, lon = riga.rsplit(";", 2)
+        dx = (float(lon) - CENTRO[1]) * math.cos(math.radians(CENTRO[0]))
+        km[norm(nome)] = math.hypot(float(lat) - CENTRO[0], dx) * 111.2
+    return km
 
 
-def in_provincia(luogo, testo, tv, altri):
+def vicino(luogo, testo, km):
     p = primo(luogo)
-    if p in tv or "treviso" in p.split():  # anche "Greater Treviso Metropolitan Area"
-        return True
-    if p in altri:  # comune di un'altra provincia: il testo non conta
-        return False
-    # frazione, "Veneto", "Italia"...: decide il testo dell'annuncio
-    return bool(re.search(r"\(tv\)|\btreviso\b", (testo or "").lower()))
+    if p in km:  # comune noto: conta solo la distanza, il testo no
+        return km[p] <= RAGGIO_KM
+    # frazione, "Veneto", "Greater Treviso Metropolitan Area"...: vale se il testo nomina un comune vicino
+    # ponytail: basta un nome nel testo (anche "paese" parola comune, o la sede dell'agenzia a Treviso)
+    t = " " + norm(testo).replace("provincia di treviso", "") + " "
+    return any(f" {n} " in t for n, d in km.items() if d <= RAGGIO_KM)
 
 
 def chiave(a):
@@ -143,7 +148,8 @@ def da_jobspy(sito):
     from jobspy import scrape_jobs  # import lento, solo quando serve
     out = []
     for q in QUERY:
-        df = scrape_jobs(site_name=[sito], search_term=q, distance=25, results_wanted=60, hours_old=168,
+        # distance in miglia: 10 = 16 km, appena oltre RAGGIO_KM
+        df = scrape_jobs(site_name=[sito], search_term=q, distance=10, results_wanted=60, hours_old=168,
                          location="Treviso, Veneto" if sito == "indeed" else "Treviso, Veneto, Italia",
                          country_indeed="italy", description_format="markdown")
         for r in df.fillna("").to_dict("records"):
@@ -256,7 +262,7 @@ def valuta(annunci):
 
 def main():
     oggi = date.today()
-    tv, altri = carica_comuni()
+    km = carica_comuni()
     stato = json.loads(FILE_DATI.read_text(encoding="utf-8")) if FILE_DATI.exists() else {"annunci": []}
     noti = {a["url"] for a in stato["annunci"]}
 
@@ -277,17 +283,17 @@ def main():
         if a["url"] not in noti:
             nuovi.setdefault(a["url"], a)
     for a in nuovi.values():
-        if not a["testo"] and a["fonte"] in DETTAGLIO and primo(a["luogo"]) not in altri:
+        if not a["testo"] and a["fonte"] in DETTAGLIO and km.get(primo(a["luogo"]), 0) <= RAGGIO_KM:
             try:
                 a["testo"] = DETTAGLIO[a["fonte"]](a["url"])[:1500]
             except Exception as e:
                 print("dettaglio non letto:", a["url"], e)
             time.sleep(1)
-    in_tv = [a for a in nuovi.values() if in_provincia(a["luogo"], a["titolo"] + " " + a["testo"], tv, altri)]
+    in_zona = [a for a in nuovi.values() if vicino(a["luogo"], a["titolo"] + " " + a["testo"], km)]
 
     # il filtro rigira anche sui vecchi: se migliora, ripulisce lo storico
-    annunci = [a for a in unisci(stato["annunci"], in_tv, oggi)
-               if in_provincia(a["luogo"], a["titolo"] + " " + (a.get("testo") or ""), tv, altri)]
+    annunci = [a for a in unisci(stato["annunci"], in_zona, oggi)
+               if vicino(a["luogo"], a["titolo"] + " " + (a.get("testo") or ""), km)]
     for a in annunci:
         a["protette"] = flag_protette(a)
     try:
@@ -303,7 +309,7 @@ def main():
     FILE_DATI.write_text(json.dumps({"aggiornato": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                                      "fonti": fonti, "annunci": annunci}, ensure_ascii=False, indent=1),
                          encoding="utf-8")
-    print(f"{len(annunci)} annunci salvati ({len(in_tv)} candidati nuovi in provincia)")
+    print(f"{len(annunci)} annunci salvati ({len(in_zona)} candidati nuovi entro {RAGGIO_KM} km)")
 
 
 if __name__ == "__main__":

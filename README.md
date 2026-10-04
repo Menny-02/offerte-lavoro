@@ -3,8 +3,8 @@
 Pagina: https://menny-02.github.io/offerte-lavoro/
 
 Ogni mattina GitHub Actions esegue `cerca.py` (si può lanciare anche a mano: Actions → cerca → Run workflow):
-raccoglie annunci d'ufficio da LinkedIn, Indeed, ClicLavoro Veneto e Subito, tiene solo la
-provincia di Treviso, li valuta con un LLM gratuito (Groq) e pubblica `docs/` su GitHub Pages.
+raccoglie annunci d'ufficio da LinkedIn, Indeed, ClicLavoro Veneto e Subito, tiene solo quelli entro
+15 km da Treviso (`RAGGIO_KM` in `cerca.py`), li valuta con un LLM gratuito (Groq) e pubblica `docs/` su GitHub Pages.
 
 ## Configurazione (una volta sola, tutto gratis)
 

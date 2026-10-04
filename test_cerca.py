@@ -1,28 +1,29 @@
 """Self-check della logica pura di cerca.py: python test_cerca.py"""
 from datetime import date
 
-from cerca import (carica_comuni, chiave, flag_protette, in_provincia, parse_llm,
-                   punteggio_parole, unisci)
+from cerca import (carica_comuni, chiave, flag_protette, parse_llm, punteggio_parole, unisci,
+                   vicino)
 
-TV, ALTRI = carica_comuni()
+KM = carica_comuni()
 
-# filtro provincia: primo pezzo del luogo, confronto esatto
-assert in_provincia("Paese, Veneto, Italia", "", TV, ALTRI)
-assert in_provincia("Castelfranco Veneto (TV)", "", TV, ALTRI)
-assert in_provincia("Treviso, VEN, IT", "", TV, ALTRI)
-assert in_provincia("Quinto di Treviso", "", TV, ALTRI)
-assert in_provincia("Greater Treviso Metropolitan Area", "", TV, ALTRI)
-assert in_provincia("CASTELLO DI GODEGO", "", TV, ALTRI)
-assert not in_provincia("Mestre, Venezia", "", TV, ALTRI)
-assert not in_provincia("Quarto d’Altino, Veneto, Italy", "zona Treviso", TV, ALTRI)  # apostrofo curvo, comune VE
-assert not in_provincia("Rubano, Veneto, Italy", "sede a Treviso", TV, ALTRI)  # comune noto di PD vince sul testo
-assert not in_provincia("Italia", "", TV, ALTRI)
-assert not in_provincia("Venice, Veneto, Italy", "zona Mestre", TV, ALTRI)
-# luogo sconosciuto (frazione, regione): decide il testo
-assert in_provincia("Bonisiolo, VEN, IT", "Sede di lavoro: Mogliano Veneto (TV)", TV, ALTRI)
-assert in_provincia("Veneto, Italy", "Azienda in provincia di Treviso cerca", TV, ALTRI)
-assert not in_provincia("Veneto, Italy", "Azienda di Padova cerca", TV, ALTRI)
-assert not in_provincia("", "", TV, ALTRI)
+# filtro distanza: primo pezzo del luogo, confronto esatto col comune, max 15 km da Treviso
+assert vicino("Treviso, VEN, IT", "", KM)
+assert vicino("Paese, Veneto, Italia", "", KM)
+assert vicino("Quinto di Treviso", "", KM)
+assert vicino("Quarto d’Altino, Veneto, Italy", "", KM)  # apostrofo curvo, comune VE a 14 km
+assert not vicino("Castelfranco Veneto (TV)", "", KM)  # in provincia ma a 24 km
+assert not vicino("CONEGLIANO (TV)", "sede a Treviso", KM)  # comune noto lontano: il testo non conta
+assert not vicino("Rubano, Veneto, Italy", "sede a Treviso", KM)
+assert not vicino("Mestre, Venezia", "", KM)
+assert not vicino("Italia", "", KM)
+assert not vicino("Venice, Veneto, Italy", "zona Mestre", KM)
+# luogo sconosciuto (frazione, regione, area metropolitana): vale se il testo nomina un comune vicino
+assert vicino("Bonisiolo, VEN, IT", "Sede di lavoro: Mogliano Veneto (TV)", KM)
+assert vicino("Greater Treviso Metropolitan Area", "Ufficio a Villorba", KM)
+assert not vicino("Greater Treviso Metropolitan Area", "Sede a Oderzo (TV)", KM)
+assert not vicino("Veneto, Italy", "Azienda in provincia di Treviso cerca", KM)
+assert not vicino("Veneto, Italy", "Azienda di Padova cerca", KM)
+assert not vicino("", "", KM)
 
 # dedup: stesso annuncio su LinkedIn e Indeed -> stessa chiave
 a = {"titolo": "Impiegata Back-Office", "azienda": "Rossi S.r.l.", "luogo": "Treviso, Veneto, Italy", "url": "u1"}
