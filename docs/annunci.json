@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-04T07:11:13+00:00",
+ "aggiornato": "2026-10-04T10:55:12+00:00",
  "fonti": {
-  "LinkedIn": "ok 218",
+  "LinkedIn": "ok 220",
   "Indeed": "ok 20",
   "ClicLavoro Veneto": "ok 60",
   "Subito": "ok 206"
@@ -3092,6 +3092,38 @@
    "protette": false,
    "punteggio": 0,
    "motivo": "Il ruolo è per farmacista laureato, non corrisponde alla tua esperienza commerciale.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Associate - Padova/ Treviso - Transaction Services [ADV] - Categoria Protetta L.68/99",
+   "azienda": "PwC Italy",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4278363420",
+   "data": "2026-10-04",
+   "fonte": "LinkedIn",
+   "testo": "Vuoi essere al centro di prospettive di crescita professionali uniche?\nEntra in PwC nel nostro team Transaction Services. In un contesto internazionale, giovane e dinamico, lavorerai a stretto contatto con team specializzati in diverse discipline e prenderai parte ad operazioni di finanza straordinaria su larga scala. Supporterai aziende di diversi settori nell’ambito di acquisizioni, cessioni, alleanze strategiche e accesso ai mercati globali dei capitali. Your Perspectives\n Sarai al fianco di azionisti e top management nella risoluzione di sfide di business complesse, dalla definizione della strategia all’execution. In particolare, nell’ambito delle operazioni di M&A nel settore industriale, avrai un ruolo chiave nella Financial Due Diligence, seguendo l’intero processo:\n Pre-deal: analisi preliminare della potenziale transazione\n Negoziazione: supporto nella determinazione del prezzo di acquisto\n Post-deal: gestione degli aggiustamenti di prezzo e valutazione delle implicazioni finanziarie dell’operazione\n TS Core\n Avrai un ruolo cruciale nell’analisi finanziaria delle operazioni straordinarie, con focus su:\n Analisi approfondita dei dati gestionali, contabili e finanziari (trend analysis, KPI, business ratios);\n Valutazione delle performance aziendali, monitorando marginalità, capitale circolante, indebitamento e flussi di cassa;\n Identificazione di rischi e opportunità connesse all’operazione, fornendo insight strategici ai clienti;\n Definizione di bridge tra dati gestio",
+   "id": "associatepadovatrevisotransactionservicesadvcategoriaprotettal6899|pwcitaly|treviso",
+   "prima_vista": "2026-10-04",
+   "protette": true,
+   "punteggio": 0,
+   "motivo": "Richiede laurea e inglese fluente, non corrisponde alla tua esperienza di impiegata commerciale.",
+   "richiede_inglese": true,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Addetto ai Servizi Ausiliari alla Sicurezza / Portierato Notturno Part-Time (30h) - Battistolli Servizi Integrati - Spresiano (TV)",
+   "azienda": "Gruppo Battistolli",
+   "luogo": "Spresiano, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4474511894",
+   "data": "2026-10-01",
+   "fonte": "LinkedIn",
+   "testo": "Battistolli Servizi Integrati ricerca Addetti/e ai Servizi Ausiliari alla Sicurezza da inserire presso un importante sito aziendale situato a Spresiano (TV) per attività di Portierato e Controllo Accessi in fascia notturna. Se desideri entrare a far parte di una realtà strutturata e operare in un contesto professionale orientato alla qualità del servizio, questa opportunità potrebbe essere quella giusta per te.\n Responsabilità\n La Risorsa Selezionata Si Occuperà Di\n Attività di portierato e presidio degli accessi in orario notturno;\n Controllo e registrazione degli ingressi e delle uscite di personale, visitatori e fornitori;\n Verifica delle autorizzazioni di accesso e gestione dei flussi;\n Monitoraggio degli impianti e delle aree comuni, con segnalazione di eventuali anomalie;\n Supporto alle attività di safety e business continuity del sito.\n Requisiti\n Buona conoscenza della lingua italiana;\n Buone competenze informatiche e dimestichezza con i principali strumenti digitali;\n Disponibilità al lavoro notturno e su turni, compresi festivi e weekend;\n Patente B e disponibilità agli spostamenti con mezzo proprio;\n Affidabilità, discrezione e senso di responsabilità.\n Completano il profilo\n Pregressa esperienza in attività di portierato, controllo accessi o servizi fiduciari;\n Buone capacità relazionali e orientamento al cliente;\n Precisione, puntualità e capacità di lavorare in autonomia.\n Benefit\n Cosa offriamo\n Contratto di lavoro subordinato regolato dal CCNL Servizi Fiduciar",
+   "id": "addettoaiserviziausiliariallasicurezzaportieratonotturnoparttime30hbattistolliserviziintegratispresianotv|gruppobattistolli|spresiano",
+   "prima_vista": "2026-10-04",
+   "protette": false,
+   "punteggio": 0,
+   "motivo": "È un lavoro di portierato notturno, non è un ruolo d'ufficio adatto a te.",
    "richiede_inglese": false,
    "punteggio_ai": true
   }
