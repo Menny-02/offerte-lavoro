@@ -22,14 +22,17 @@ RAGGIO_KM = 15  # annunci più lontani di così dal centro di Treviso spariscono
 WEB = requests.Session(impersonate="chrome")  # finge Chrome: Subito blocca i client Python normali
 
 # LinkedIn e Indeed accettano OR: poche ricerche = meno rischio di blocco
+# le prime quattro sono i suoi avvisi su LinkedIn e Indeed: front-back office, ufficio acquisti,
+# servizio clienti, inserimento ordini su gestionale (una ricerca ciascuno, max 60 risultati l'una)
 QUERY = [
-    '"inserimento ordini" OR "gestione ordini" OR "order entry" OR "ufficio ordini"',
+    '"back office" OR "front office"',
     '"ufficio acquisti" OR "addetta acquisti" OR "addetto acquisti" OR "assistente acquisti"',
-    '"back office" OR "front office" OR "customer service" OR "servizio clienti" OR "customer care"',
+    '"servizio clienti" OR "assistenza clienti" OR "customer service" OR "customer care"',
+    '"inserimento ordini" OR "gestione ordini" OR "order entry" OR "ufficio ordini"',
     '"impiegata commerciale" OR "impiegato commerciale" OR "assistente commerciale" OR "ufficio vendite"',
     '"impiegata amministrativa" OR "segreteria" OR "ufficio spedizioni" OR "receptionist"',
 ]
-QUERY_SUBITO = ["impiegata", "ufficio", "back office", "segreteria", "commerciale", "acquisti", "ordini", "clienti"]
+QUERY_SUBITO = ["impiegata", "ufficio", "back office", "front office", "segreteria", "commerciale", "acquisti", "ordini", "clienti"]
 
 # Titoli da ufficio (filtra ClicLavoro, che restituisce tutte le offerte della provincia)
 UFFICIO = re.compile(r"impiegat|ufficio|office|segretar|segreteri|contabil|amministrativ|acquist|approvvigion|"
