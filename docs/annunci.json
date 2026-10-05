@@ -1,10 +1,10 @@
 {
- "aggiornato": "2026-10-04T10:55:12+00:00",
+ "aggiornato": "2026-10-05T12:02:53+00:00",
  "fonti": {
-  "LinkedIn": "ok 220",
-  "Indeed": "ok 20",
-  "ClicLavoro Veneto": "ok 60",
-  "Subito": "ok 206"
+  "LinkedIn": "ok 182",
+  "Indeed": "ok 21",
+  "ClicLavoro Veneto": "ok 62",
+  "Subito": "ok 205"
  },
  "annunci": [
   {
@@ -104,22 +104,6 @@
    "punteggio_ai": true
   },
   {
-   "titolo": "Impiegato/a ufficio acquisti L.68/99",
-   "azienda": "",
-   "luogo": "Quinto di Treviso (TV)",
-   "url": "https://www.subito.it/offerte-lavoro/impiegato-a-ufficio-acquisti-l-68-99-treviso-659524660.htm",
-   "data": "2026-09-04",
-   "fonte": "Subito",
-   "testo": "Eurointerim Spa - filiale di Villorba, ricerca per azienda del settore metalmeccanico a Quinto di Treviso (TV) un profilo professionale da inserire in qualità di: \n \n\nImpiegato/a ufficio acquisti L.68/99\n \n\nDescrizione del lavoro: La persona si occuperà di: \no Emissione e gestione degli ordini verso fornitori; \no Inserimento e monitoraggio degli ordini di acquisto e della relativa documentazione; \no Controllo e gestione dei documenti di trasporto (DDT); \no Supporto nelle attività di contabilità ordinaria e amministrazione di base; \no Collaborazione nelle attività amministrative legate alla gestione del personale. \n \nCompetenze richieste: I requisiti fondamentali per lo svolgimento del ruolo sono: \no Esperienza pregressa nell'ambito metalmeccanico; \no Buona conoscenza del pacchetto Microsoft Office, in particolare Excel; \no Precisione, organizzazione e attenzione nella gestione delle attività amministrative; \no Iscrizione alle categorie protette ai sensi della Legge 68/99. \n\n \nTipo di assunzione: Contratto di somministrazione iniziale finalizzato all'assunzione diretta da parte dell'azienda. \nDisponibilità lavorativa: Full-time da valutare dal lunedì al venerdì. \nRetribuzione lorda mensile: 1600-2000, CCNL metalmeccanica. \nLuogo di lavoro: Quinto di Treviso (TV) \n \nLa ricerca si rivolge a candidati ambosessi (D.lgs. n.198/2006); applicandosi all'annuncio il Candidato conferma di aver letto e accettato l'informativa privacy presente al link http://www.eurointerim.it/informativa",
-   "id": "https://www.subito.it/offerte-lavoro/impiegato-a-ufficio-acquisti-l-68-99-treviso-659524660.htm",
-   "prima_vista": "2026-10-03",
-   "protette": true,
-   "punteggio": 85,
-   "motivo": "Cercano chi gestisca ordini e fornitori: è proprio la tua esperienza.",
-   "richiede_inglese": false,
-   "punteggio_ai": true
-  },
-  {
    "titolo": "Addetto Approvvigionamenti -Buyer",
    "azienda": "Gi Group",
    "luogo": "Roncade, Veneto, Italy",
@@ -180,6 +164,22 @@
    "protette": false,
    "punteggio": 85,
    "motivo": "Impiegata amministrativo‑contabile corrisponde perfettamente alle tue competenze d'ufficio.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Assistente di Direzione e Segreteria Admin + Comm",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/assistente-di-direzione-e-segreteria-admin-comm-treviso-663247490.htm",
+   "data": "2026-10-04",
+   "fonte": "Subito",
+   "testo": "Segreteria generale e Direzione: Gestione e coordinamento agenda,  impegni, riunioni, incontri, viaggi e trasferte dell'Amministratore. Gestione corrispondenza, contatti e comunicazioni interne ed esterne, necessità e iniziative per il benessere e la vita aziendale del personale.\n\nAmministrazione: Contabilità ciclo attivo. Gestione documentazione amministrativa dipendenti, clienti, fornitori, contratti e ordini. Interfaccia con i consulenti per le attività di competenza.\n\nSupporto commerciale: Presa appuntamenti con clienti e prospect. Predisposizione, invio e follow‑up offerte commerciali e aggiornamento dello stato. Gestione ordini.\n\nComunicazione e marketing: Raccordo con agenzia esterna per revisione post social e web, newsletter, aggiornamento dei contenuti. Raccolta e organizzazione materiali per attività promozionali.\n\nRequisiti:\n- Ottima padronanza della suite Microsoft Office;\n- Conoscenza del francese livello C1, scritto e parlato;\n- Utilizzo strumenti di AI generativa, con prompt efficaci e verifica con senso critico dei risultati\n- Disponibilità a brevi trasferte, anche all'estero, della durata tipica di 2-3 giorni\n- Precisione, riservatezza, capacità organizzativa e di gestione delle priorità\n- Autonomia operativa e lavoro per obiettivi\n\nQualità gradite:\n- Empatia e attenzione alle persone\n- Equilibrio nei momenti di maggiore pressione\n- Capacità di gestire i conflitti e diplomazia\n- Attitudine al problem solving\n\nCostituisce titolo preferenziale\n- Formazione giu",
+   "id": "https://www.subito.it/offerte-lavoro/assistente-di-direzione-e-segreteria-admin-comm-treviso-663247490.htm",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 85,
+   "motivo": "Assistente di direzione e segreteria è perfetto per le tue competenze di front/back office.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
@@ -536,6 +536,38 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Export Area Manager",
+   "azienda": "PRAXI",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4473630007",
+   "data": "2026-10-05",
+   "fonte": "LinkedIn",
+   "testo": "Export Area Manager \n La figura individuata riporterà direttamente alla Direzione, raccordandosi circa i progetti e le attività da intraprendere, dovrà ampliare il mercato di riferimento e supportare l’azienda nella gestione dei clienti acquisiti.\n Principali Attività \n Effettuare una ricerca sistematica nel mercato di nuove opportunità commerciali nei mercati assegnati (Nord e Centro Europa, Centro e Sud America, Medio Oriente ed India);\n Gestire le relazioni con i distributori locali, agenti o altri interlocutori di potenziale interesse per l’azienda;\n Pianificare in modo autonomo le trasferte (almeno il 30-50% del tempo sarà in viaggio per visite clienti o eventi di settore);\n Controllare mensilmente l’ andamento dei fatturati , l’andamento dei nuovi prodotti, la soddisfazione del cliente (qualità prodotto, servizio, reclami);\n Partecipare, gestire e concorrere all’organizzazione di eventi : fiere, presentazioni prodotti, etc;\n Presenziare alle visite dei clienti presso la sede ed eventuali attività correlate;\n Redigere reportistica per la Direzione .\n Requisiti \n Fondamentali/Must have \n Diploma o laurea di tipo tecnico e/o economico;\n Esperienza pluriennale nel settore adesivi, collanti industriali, vernici industriali o affini;\n Disponibilità a frequenti trasferte internazionali (50% del tempo)\n Preferenziali/Nice to have \n Conoscenza della lingua inglese , costituisce un plus la conoscenza di una seconda lingua straniera;\n Conoscenza dei mercati di riferimento; \n Buone",
+   "id": "exportareamanager|praxi|treviso",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 70,
+   "motivo": "Ruolo manageriale richiede competenze commerciali più avanzate rispetto al tuo profilo.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Imp. amministrativo contabile di Studio",
+   "azienda": "IQM selezione",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4475577307",
+   "data": "2026-10-05",
+   "fonte": "LinkedIn",
+   "testo": "Informazioni sull'azienda \n IQM Selezione, società di head-hunting che da oltre 20 anni accompagna aziende e professionisti nella crescita con un approccio etico, consulenziale e orientato al valore delle persone, ricerca per studio cliente con sede a Treviso, ricerchiamo un/una AMMINISTRATIVAO/A CONTABILE con esperienza pregressa nella mansione maturata presso studi strutturati e modernamente organizzati.\n Informazioni sul ruolo \n Il candidato ideale sarà in grado di svolgere le segueti mansioni.\n Responsabilità \n Tenuta contabilità generale,\n Fatturazione attiva e passiva, liquidazioni iva e adempimenti connessi;\n Adempimenti home banking e invii telematici Entratel (dichiarazioni fiscali) e Infocamere (deposito bilanci, variazioni societarie, pratiche Registro imprese in generale);\n Gestione pratiche CCIAA, agenzia delle Entrate, INPS ed altri Enti Pubblici (comunicazioni varie, deposito bilanci), fatturazione elettronica, adempimenti privacy e antiriciclaggio, archiviazione;\n Adempimenti Intrastat/LIPE;\n Effettuare ordini ai fornitori, valutando autonomamente e segnalando le necessità dello Studio;\n Pieno supporto all'organizzazione di incontri e riunioni;\n Gestione archivi, redazione documenti;\n Qualifiche \n Diploma di ragioneria e/o Laurea in materie economiche;\n Competenze richieste \n Buone competenze di contabilità;\n Esperienza nel ruolo, maturata presso Studi professionali di livello (Dottori commercialisti, Studi legali o Notai), strutturati e modernamente organizza",
+   "id": "impamministrativocontabiledistudio|iqmselezione|treviso",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 70,
+   "motivo": "Contabilità e amministrazione corrispondono alle tue basi di ragioneria.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Shipping Specialist",
    "azienda": "CAME Spa",
    "luogo": "Casier, Veneto, Italy",
@@ -760,6 +792,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Setter Telefonico",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/setter-telefonico-treviso-663356196.htm",
+   "data": "2026-10-05",
+   "fonte": "Subito",
+   "testo": "Grandi Agenzie è proprietaria di Boscaraus, scuola di formazione italiana specializzata nell'aiutare le agenzie immobiliari a diventare aziende strutturate, organizzate e profittevoli.\n\nPer ampliare il team cerchiamo un Setter Telefonico che si occupi di contattare aziende che hanno già richiesto informazioni sui servizi Boscaraus.\n\nDi cosa ti occuperai\nContattare telefonicamente potenziali clienti già interessati;\nComprendere le loro esigenze;\nQualificare il contatto;\nFissare una videocall con uno dei nostri consulenti;\nAggiornare il gestionale con le informazioni raccolte.\n\nNon sono previste attività di vendita né chiamate a freddo.\n\nRequisiti\nOttime capacità comunicative e relazionali;\nPredisposizione al contatto telefonico;\nOttima conoscenza della lingua italiana;\nBuona dimestichezza con gli strumenti informatici.\n\nCostituisce titolo preferenziale l'esperienza nella presa appuntamenti, customer care o ruoli analoghi.\n\nCosa offriamo\nCollaborazione part-time o full-time con flessibilità;\nContatti già interessati ai nostri servizi;\nFormazione e affiancamento;\nSupporto continuo e strumenti digitali dedicati;\nPossibilità di crescita e collaborazione a lungo termine;\nCompenso orario + incentivi.\nCome candidarsi\n\nInvia la tua candidatura a info@boscaraus.com.\n\nSe il profilo sarà in linea con la posizione, verrai contattato dal nostro reparto Risorse Umane per un primo colloquio conoscitivo.",
+   "id": "https://www.subito.it/offerte-lavoro/setter-telefonico-treviso-663356196.htm",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 65,
+   "motivo": "Il lavoro richiede contatti telefonici e gestione dati, affini alla tua esperienza commerciale.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Ufficio Commerciale Estero",
    "azienda": "Bettio Flyscreens",
    "luogo": "Casale sul Sile, Veneto, Italy",
@@ -949,6 +997,22 @@
    "punteggio": 60,
    "motivo": "Cercano receptionist front office, esperienza in accoglienza e back office è adatta, ma richiedono inglese buono.",
    "richiede_inglese": true,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "E-Commerce Amazon Specialist",
+   "azienda": "Nected Ricerca e Selezione",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4474260557",
+   "data": "2026-10-05",
+   "fonte": "LinkedIn",
+   "testo": "Scheda Sintetica dell'Offerta \n Qualifica / Titolo Posizione: E-commerce Specialist (Amazon Marketplace – Vendor Central / Seller Central, Amazon SEO e Amazon Ads)\n Sede di lavoro: Treviso (TV), Veneto – Zona sud-ovest di Treviso (via, CAP e riferimenti di trasporto da definire in sede di colloquio)\n Settore / Categoria: Commercio / Distribuzione di Elettronica di Consumo / E-commerce e Marketplace Amazon\n Inquadramento e Contratto: tipologia contrattuale da definire in sede di colloquio – CCNL Commercio (Terziario, Distribuzione e Servizi), 2-3° livello\n Orario di lavoro: Full-Time, 100% in presenza (smart working non previsto)\n Retribuzione e Benefit: netto mensile da definire in sede di colloquio (~26.000 € - 38.000 € RAL annua in base all'esperienza), 14 mensilità da CCNL Commercio + bonus annuale fino a 2 mensilità + percorso di crescita professionale\n Descrizione Azienda \n Per conto di una consolidata e strutturata realtà di riferimento nella distribuzione di prodotti elettronici di consumo, situata nella zona sud-ovest di Treviso, ricerchiamo un/a E-commerce Specialist da inserire nell'organico. L'azienda opera sul mercato nazionale e internazionale e offre un contesto di lavoro moderno, in forte sviluppo, orientato alla valorizzazione delle competenze e al benessere del personale.\n Posizione e Contesto Operativo \n La risorsa sarà inserita nell'area e-commerce e avrà la responsabilità della gestione e dell'ottimizzazione delle vendite del brand su Amazon, con focus su ",
+   "id": "ecommerceamazonspecialist|nectedricercaeselezione|treviso",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 60,
+   "motivo": "Lavoro e‑commerce richiede competenze digitali non presenti nel tuo curriculum.",
+   "richiede_inglese": false,
    "punteggio_ai": true
   },
   {
@@ -1256,6 +1320,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "General Services & Front Office Internship",
+   "azienda": "OMNIA Technologies",
+   "luogo": "Trevignano, VEN, IT",
+   "url": "https://it.indeed.com/viewjob?jk=9e28a1e91ce3efc8",
+   "data": "2026-10-03",
+   "fonte": "Indeed",
+   "testo": "**Omnia Technologies** è un Gruppo che **unisce i migliori specialisti delle tecnologie integrate per il settore wine, beverage e quello farmaceutico/medicale** con l’obiettivo di fornire soluzioni d’impianti “chiavi in mano”. Dal processo di lavorazione della materia prima al confezionamento finale, **mettiamo al servizio del cliente linee di automazione innovative e sostenibili**, con la massima possibilità di customizzazione.\n\nIn Omnia Technologies crediamo che innovazione e sostenibilità debbano procedere insieme. Per questo integriamo la sostenibilità nel nostro modo di operare, guidando le scelte aziendali con trasparenza, responsabilità e miglioramento continuo. Il nostro impegno si esprime nella valorizzazione delle persone, nel rafforzamento dei presidi organizzativi e nella qualità delle soluzioni tecnologiche che offriamo ai nostri clienti, contribuendo a generare valore condiviso e a migliorare progressivamente la nostra performance ambientale e operativa.\n\nIl nostro Gruppo conta 39 sedi produttive in Italia, 24 uffici commerciali distribuiti in tutto il mondo, più di 2700 persone e oltre 200 ingegneri impegnati nelle attività di R&D.\n\n**General Services & Front Office Internship**\n==============================================\n\n**Job** **Summary:**\n\n  \n\nPer il nostro HQ di Signoressa di Trevignano, stiamo ricercando una persona da inserire in stage che desideri maturare un’esperienza concreta all’interno dell’area General Services. La risorsa affiancherà le figur",
+   "id": "generalservicesfrontofficeinternship|omniatechnologies|trevignano",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 50,
+   "motivo": "È uno stage, quindi il punteggio è limitato nonostante sia front office.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Addetti alla contabilità",
    "azienda": "",
    "luogo": "CASALE SUL SILE (TV)",
@@ -1316,6 +1396,22 @@
    "protette": false,
    "punteggio": 45,
    "motivo": "Vendita ricambi richiede conoscenze tecniche non presenti.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Customs Specialist - Provincia di Treviso",
+   "azienda": "Michael Page",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4473629687",
+   "data": "2026-10-05",
+   "fonte": "LinkedIn",
+   "testo": "Come Customs Specialist, avrai il compito di gestire le operazioni doganali, assicurando il rispetto delle normative vigenti e la corretta gestione della documentazione. Il ruolo richiede precisione e attenzione ai dettagli, con un focus sul settore Spedizioni Internazionali.\n Dettagli sul cliente \n L'azienda opera nel settore Doganale ed è situata a Silea (TV)\n Descrizione \n Preparare e verificare la documentazione doganale necessaria per le spedizioni.\n Gestire le comunicazioni con le autorità doganali e i partner logistici.\n Monitorare le normative doganali e garantire la conformità aziendale.\n Supportare l'ottimizzazione dei processi doganali per migliorare l'efficienza operativa.\n Fornire consulenza interna sulle pratiche doganali e sulle normative vigenti.\n Risolvere eventuali problematiche legate alle operazioni doganali.\n Profilo del Candidato \n Cerchiamo una persona che abbia:\n Esperienza, anche minima, nella gestione di pratiche doganali nel settore\n Conoscenza delle normative doganali e delle procedure di import/export.\n Capacità di analisi e attenzione ai dettagli.\n Abilità comunicative e organizzative per interfacciarsi con vari interlocutori.\n offerta di lavoro \n Contratto a tempo indeterminato.\n Retribuzione compresa tra 25.000 e 30.000 EUR annui.\n Opportunità di lavorare in un contesto specializzato nel settore\n Se interessati, inviare la propria candidatura.\n Fatta eccezione per il caso in cui presenti la tua candidatura per posizioni riservate a categorie pr",
+   "id": "customsspecialistprovinciaditreviso|michaelpage|treviso",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 45,
+   "motivo": "Gestione doganale è lontana dalla tua esperienza di ordini e clienti.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
@@ -1492,6 +1588,22 @@
    "protette": false,
    "punteggio": 40,
    "motivo": "Consulente Finance junior su Dynamics è solo parzialmente affine alle tue competenze.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Disponente Ufficio Traffico",
+   "azienda": "CST LOGISTICA TRASPORTI",
+   "luogo": "Scorzè, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4451504259",
+   "data": "2026-10-05",
+   "fonte": "LinkedIn",
+   "testo": "CST Logistica Trasporti, realtà storica e riconosciuta a livello nazionale nella gestione integrata dei trasporti e della logistica, ricerca una figura di Disponente Ufficio Traffico per ampliamento del proprio organico.\n La figura professionale si occuperà del coordinamento di un team di autisti al fine di gestire e completare un planning di ordini giornalieri.\n Responsabilità principali \n Gestione di un team di autisti con comunicazione efficace.\n Gestione operativa degli autisti e delle relative mansioni per garantire la puntuale esecuzione delle spedizioni con monitoraggio costante delle relative attività (dal ritiro alla consegna della merce).\n Pianificazione puntuale dei viaggi.\n Gestione delle non conformità relative ai trasporti e alle consegne dei prodotti (coordinamento tra uffici gestione mezzi e customer service).\n Collaborazione attiva con l’officina meccanica per interventi di manutenzione ordinaria /straordinaria.\n Ottimizzazione della produttività degli autisti/automezzi in gestione, garantendo il rispetto dei parametri di produttività aziendali e relative procedure.\n Evidenziare eventuali criticità ed opportunità per individuare soluzioni per ottimizzare costi e metodi.\n Requisiti richiesti \n Esperienza pregressa, anche breve, in posizioni analoghe in aziende strutturate.\n Diploma e/o laurea ad indirizzo tecnico, logistico o ingegneristico.\n Conoscenza della lingua inglese.\n Capacità comunicative, di pianificazione e supervisione.\n Dinamismo, capacità di gest",
+   "id": "disponenteufficiotraffico|cstlogisticatrasporti|scorze",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 40,
+   "motivo": "Coordinamento autisti è più logistico che amministrativo per te.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
@@ -2084,6 +2196,54 @@
    "protette": false,
    "punteggio": 30,
    "motivo": "Il lavoro è focalizzato su logistica e gestione magazzino, poco affine al tuo profilo.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Commessi delle vendite al minuto",
+   "azienda": "",
+   "luogo": "TREVISO (TV)",
+   "url": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/535484",
+   "data": "2026-10-05",
+   "fonte": "ClicLavoro Veneto",
+   "testo": "Descrizione qualifica \n Addetto/a alle vendita \n(Cura e attenzione al cliente: accoglienza e assistenza alla clientela per garantire un'esperienza di acquisto in linea con gli standard e i valori aziendali.\nGestione del reparto: allestimento e rifornimento dei prodotti, monitoraggio della freschezza e cura del layout merceologico.\nOperazioni di cassa: gestione precisa e sicura delle transazioni.\nPreparazione spese: supporto nella preparazione degli ordini (servizio Alìperme).\nControllo qualità: monitoraggio costante delle scadenze e supporto alle attività di inventario e magazzino.)\nAddetto al Reparto Ortofrutta\n(Manutenzione del reparto: cura costante della pulizia e dell'ordine dell'area di vendita.\nEsposizione e allestimento: attività di esposizione della merce su scaffali e banchi per garantire un layout funzionale e attrattivo.\nAssistenza alla clientela: supporto diretto ai clienti nella scelta dei prodotti ortofrutticoli.\nControllo qualità: monitoraggio costante della freschezza e qualità dei prodotti ortofrutticoli)\n Sede \n TREVISO\n (TV)\n Data pubblicazione \n 5 ottobre 2026\n Tipo di rapporto di lavoro offerto \n Lavoro a termine\n Patenti richieste \n PATENTE B\n Lingue richieste \n ITALIANO\n CCNL\n COMMERCIO (D.M.O.) - Federdistribuzione\n RAL\n 23.785 €\n Intermediata da \n Ambito Provinciale - Centro per l'Impiego di Treviso\n Incontralavoro \n IL PAESE 26 del 01/10/2026",
+   "id": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/535484",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 30,
+   "motivo": "Vendita al minuto è un lavoro di vendita al dettaglio, non di ufficio.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Commessi delle vendite al minuto",
+   "azienda": "",
+   "luogo": "PREGANZIOL (TV)",
+   "url": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/535474",
+   "data": "2026-10-05",
+   "fonte": "ClicLavoro Veneto",
+   "testo": "Descrizione qualifica \n Si ricerca per realtà della GDO alimentare, un addetto al rifornimento scaffali e ordine dei prodotti mancanti. Si richiede il possesso della Patente di Guida B - Automunito/a, buona conoscenza della lingua Italiana. Si propone contratto di lavoro a tempo determinato (3/ mesi) con la possibilità di trasformazione in tempo indeterminato. Orario di lavoro: full time da lunedì a domenica con un giorno di riposo a rotazione, 2 turni giornalieri con pausa pranzo. Inquadramento contrattuale: - RAL dal 21.634 \n Sede \n PREGANZIOL\n (TV)\n Data pubblicazione \n 5 ottobre 2026\n Tipo di rapporto di lavoro offerto \n Lavoro a termine\n Intermediata da \n Ambito Provinciale - Centro per l'Impiego di Treviso",
+   "id": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/535474",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 30,
+   "motivo": "Stessa mansione di vendita al dettaglio, poco adatta al tuo profilo.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Agenti Immobiliari",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/agenti-immobiliari-treviso-663324210.htm",
+   "data": "2026-10-05",
+   "fonte": "Subito",
+   "testo": "Agli Agenti Immobiliari Senior offriamo:\n-Un marchio di prestigio\n-Una sede di rappresentanza\n-Condizioni economiche molto importanti.\nImmobildream seleziona Agenti Immobiliari Senior con esperienza nelle acquisizioni e nelle vendite di immobili residenziali a Cortina d’Ampezzo.\nEntrare in Immobildream significa lavorare con un marchio leader del mercato immobiliare, all’interno di uffici prestigiosi, in un ambiente moderno, elegante e rappresentativo, perché l’immagine con cui un professionista si presenta al proprietario di un immobile prestigioso fa la differenza.\nLa nostra proposta economica è chiara:\n50% delle provvigioni maturate sul proprio fatturato\n+ euro 1.500,00 di incentivi ogni mese con almeno un incarico di vendita acquisito.\neuro 1.500,00 sono aggiuntivi al 50% delle provvigioni, niente formule complicate, \nproduci fatturato: prendi il 50%; acquisisci almeno un incarico al mese: aggiungiamo euro 1.500,00.\nMettiamo a tua disposizione:\n-la forza di un marchio immobiliare di prestigio\n-uffici altamente rappresentativi a Cortina d’Ampezzo\n-campagne di lead generation rivolte a proprietari interessati a vendere\n-importanti investimenti pubblicitari\n-presenza con extra visibilità sui principali portali immobiliari e sui social media \n-servizi fotografici, video e virtual tour professionali, per gli immobili acquisiti,\n-marketing, comunicazione e strumenti digitali\n-zona operativa riservata\n-autonomia professionale\nSe sei un Agente Immobiliare Senior, devi avere un ma",
+   "id": "https://www.subito.it/offerte-lavoro/agenti-immobiliari-treviso-663324210.htm",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 30,
+   "motivo": "Agente immobiliare è una vendita esterna, non un ruolo d'ufficio.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
@@ -2708,6 +2868,22 @@
    "protette": false,
    "punteggio": 10,
    "motivo": "Funzionario informatico è fuori dal tuo ambito di front/back office.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Cameriere/a - snackista",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/cameriere-a-snackista-treviso-599929057.htm",
+   "data": "2026-10-04",
+   "fonte": "Subito",
+   "testo": "CAMERIERE/A - | INFINITY PUB PIZZERIA\n\nInfinity Pub Pizzeria cerca un/una cameriere/a da inserire nel proprio staff.\n\nLa figura si occuperà di:\n\n* Accoglienza clienti, raccolta ordinazioni e servizio ai tavoli.\n* Riordino e pulizia delle postazioni di lavoro.\n\nCerchiamo una persona seria, puntuale e dinamica, con cortesia verso i clienti e capacità di lavorare in squadra. È gradita esperienza nella ristorazione o in mansioni simili.\n\nOrari, inquadramento e retribuzione saranno definiti durante il colloquio in base al ruolo e all'esperienza.\n\nPer candidarti, rispondi direttamente all'annuncio inviando il curriculum oppure una breve presentazione con le tue esperienze, la disponibilità e un recapito telefonico.\n[ contatto] \n393/0362700",
+   "id": "https://www.subito.it/offerte-lavoro/cameriere-a-snackista-treviso-599929057.htm",
+   "prima_vista": "2026-10-05",
+   "protette": false,
+   "punteggio": 10,
+   "motivo": "Il ruolo è di ristorazione, non corrisponde alle tue competenze d'ufficio.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
