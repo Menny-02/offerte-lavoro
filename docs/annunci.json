@@ -1,9 +1,9 @@
 {
- "aggiornato": "2026-10-10T10:58:38+00:00",
+ "aggiornato": "2026-10-11T11:11:54+00:00",
  "fonti": {
-  "LinkedIn": "ok 235",
-  "Indeed": "ok 9",
-  "ClicLavoro Veneto": "ok 70",
+  "LinkedIn": "ok 110",
+  "Indeed": "ok 10",
+  "ClicLavoro Veneto": "ok 69",
   "Subito": "ok 196"
  },
  "annunci": [
@@ -1301,6 +1301,22 @@
    "punteggio": 65,
    "motivo": "Cercano una contabile esperta, la tua esperienza è più orientata al commerciale.",
    "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Impiegato del back office",
+   "azienda": "I-Total / I-Drink",
+   "luogo": "Marcon, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4475617830",
+   "data": "2026-10-10",
+   "fonte": "LinkedIn",
+   "testo": "I-TOTAL e I-DRINK sono marchi internazionali in rapida espansione nel settore del regalo creativo e del design.\n Con una rete distributiva attiva in oltre 50 Paesi , i nostri brand si stanno consolidando come riferimento nel panorama europeo e internazionale.\n Per il potenziamento del nostro team commerciale, cerchiamo un/una:\n 🌍 COMMERCIALE INTERNO/A – MERCATO ITALIA/ESTERO \n (lingua inglese necessaria, altre lingue tra cui francese, tedesco e spagnolo gradite) \n 📍 Sede: Marcon (VE) – Contratto a tempo indeterminato – no smart working - no part time \n 🎯 Chi stiamo cercando \n Un/una professionista con almeno 5 anni di esperienza in ambito commerciale estero, preferibilmente in contesti strutturati e dinamici.\n Una persona precisa, autonoma, dotata di ottime capacità relazionali, in grado di gestire clienti e agenti internazionali con approccio organizzato, concreto e orientato al risultato.\n 🛠️ Responsabilità principali \n Gestione operativa e quotidiana dei clienti esteri.\n Collaborazione costante con la rete di agenti : supporto operativo, offerte, follow-up ordini e sviluppo commerciale.\n Inserimento, conferma e monitoraggio ordini tramite ERP aziendale .\n Redazione di offerte commerciali , gestione condizioni economiche, scontistiche e listini.\n Attività di customer care , gestione post-vendita, reclami e aggiornamento database clienti.\n Traduzione e revisione di materiali promozionali, offerte e cataloghi.\n Coordinamento con logistica, ufficio prodotto, grafico e marketin",
+   "id": "impiegatodelbackoffice|itotalidrink|marcon",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 65,
+   "motivo": "Cercano chi gestisca ordini e clienti: è proprio la tua esperienza.",
+   "richiede_inglese": true,
    "punteggio_ai": true
   },
   {
@@ -3816,6 +3832,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Store Manager",
+   "azienda": "Action",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4468013572",
+   "data": "2026-10-10",
+   "fonte": "LinkedIn",
+   "testo": "A proposito di Action\n Action è il discount non alimentare con la crescita più rapida in Europa. Abbiamo iniziato la nostra attività con un piccolo punto vendita in Olanda nel 1993 ed oggi la nostra azienda è cresciuta diventando un'organizzazione internazionale retail con più di 2.650 negozi in 12 paesi e più di 72.000 persone di 159 nazionalità. Questi numeri crescono ogni giorno.\nLavorare per Action significa avere un datore di lavoro solido e finanziariamente affidabile, dall'approccio concreto e motivante.\nHai esperienza nel settore retail e vorresti fare un salto di qualità? Ti piacerebbe lavorare in un team di alto livello? Vuoi avere la possibilità di crescere professionalmente in un'organizzazione internazionale di grande successo? Allora la posizione di Store Manager del punto vendita di Action è la scelta giusta per te!\n Lavorare da Action!\n Insieme agli Assistant Store Manager, ti occuperai dell'ottimizzazione delle vendite del nostro assortimento nonché della gestione del personale di negozio. Monitorerai il fatturato, organizzerai il posizionamento della merce sugli scaffali con l’obiettivo di massimizzare le vendite. Sarai anche responsabile degli ordini, della chiusura giornaliera delle casse, della pianificazione di ogni attività. Ti assicurerai che i colleghi possano crescere e ti impegnerai in prima persona nella selezione del tuo team. Ti confronterai regolarmente con il Regional Manager per quanto riguarda l'andamento del fatturato ed i risultati della tu",
+   "id": "storemanager|action|treviso",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 30,
+   "motivo": "Il ruolo è retail manager, poco affine alle tue competenze d'ufficio.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Promoter in Team – Formazione Garantita",
    "azienda": "LOA MARKETING",
    "luogo": "Treviso, Veneto, Italy",
@@ -4532,6 +4564,22 @@
    "protette": false,
    "punteggio": 20,
    "motivo": "È un apprendistato per impiegata/o junior, rientra nel limite massimo consentito.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "CONTROLLER INDUSTRIALE",
+   "azienda": "MAW",
+   "luogo": "Paese, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4475220200",
+   "data": "2026-10-09",
+   "fonte": "LinkedIn",
+   "testo": "MAW S.p.A. Divisione Search & Selection, Polo di Treviso, per una solida realtà manifatturiera in continua evoluzione, ricerchiamo un Controller che opererà a diretto riporto del CFO, contribuendo allo sviluppo degli strumenti di controllo e supportando il management nelle decisioni strategiche. La figura entrerà in un contesto dinamico e stimolante, caratterizzato da importanti progetti di miglioramento organizzativo e digitalizzazione dei processi aziendali.\n Di cosa ti occuperai \n Elaborazione e analisi della reportistica gestionale mensile\n Analisi degli scostamenti rispetto a budget, forecast e storico aziendale\n Monitoraggio e sviluppo dei KPI aziendali attraverso strumenti di Business Intelligence\n Supporto alle chiusure mensili e alle attività di controllo di gestione\n Predisposizione della reportistica direzionale per il management\n Analisi della marginalità per cliente, prodotto e canale\n Supporto ai processi di budgeting e forecasting\n Verifica della coerenza e riconciliazione dei dati provenienti da diverse fonti aziendali\n Collaborazione continua con Operations, Produzione, Commerciale e Amministrazione\n Il profilo che cerchiamo \n ✅ Laurea in Economia, Ingegneria Gestionale o discipline affini\n ✅ Esperienza di almeno 3 anni nel controllo di gestione in aziende manifatturiere\n ✅ Ottima conoscenza di Excel e degli strumenti di Business Intelligence (Qlik, Power BI o equivalenti)\n ✅ Capacità di interpretare i dati e trasformarli in informazioni utili al business\n ✅ ",
+   "id": "controllerindustriale|maw|paese",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 20,
+   "motivo": "Il lavoro richiede competenze contabili avanzate e laurea, non corrispondono alla tua esperienza.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
@@ -6100,6 +6148,54 @@
    "protette": false,
    "punteggio": 0,
    "motivo": "È un lavoro di pulizie, totalmente fuori dal tuo ambito professionale.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Commercialista",
+   "azienda": "IQM selezione",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4477810291",
+   "data": "2026-10-09",
+   "fonte": "LinkedIn",
+   "testo": "",
+   "id": "commercialista|iqmselezione|treviso",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 0,
+   "motivo": "È una posizione da commercialista, richiede laurea e competenze specifiche.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Cameriere/cameriera",
+   "azienda": "Geysis Treviso Srl",
+   "luogo": "Treviso, VEN, Italy",
+   "url": "https://it.indeed.com/viewjob?jk=6b182afa418484b6",
+   "data": "2026-10-11",
+   "fonte": "Indeed",
+   "testo": "**IL ST. THOMAS GATE PUB CERCA TE! ORA ASSUMIAMO: CAMERIERE/A DI SALA**\n\nSei una persona dinamica, energica e ami il contatto con il pubblico? Il **St. Thomas Gate Pub** in pieno centro a **Treviso** sta ampliando la sua squadra! Cerchiamo una figura motivata, pronta a unirsi al nostro team per vivere il ritmo e l'energia delle nostre serate.\n\n**Cosa offriamo e cosa cerchiamo:**\n\n* **Impegno settimanale:** Disponibilità per **3-5 sere a settimana**.\n* **Giorni garantiti:** Presenza fissa durante il **weekend (venerdì, sabato e domenica)**.\n* **Flessibilità:** Disponibilità per altre **1 o 2 serate infrasettimanali** in concomitanza con i nostri eventi di punta (grandi partite di calcio/rugby in diretta, serate con musica live, eventi speciali).\n\n**Il candidato ideale:**\n\n* Serietà, puntualità e predisposizione al lavoro di squadra.\n* Ottime doti comunicative e attitudine al servizio clienti.\n* Domicilio a Treviso o zone limitrofe.\n* Un sorriso sempre pronto, anche nelle serate più movimentate!\n\n**Vuoi salire a bordo?**  \nInviaci la tua candidatura e il tuo Curriculum Vitae. **Ti aspettiamo per far parte delle serate più vive di Treviso!**\n\nRetribuzione: €9,00 - €12,00 all'ora\n\nSede di lavoro: In presenza",
+   "id": "camerierecameriera|geysistrevisosrl|treviso",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 0,
+   "motivo": "Lavoro di sala, non è un impiego d'ufficio.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
+   "titolo": "Cameriere/a pizzaiolo",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/cameriere-a-pizzaiolo-treviso-599929057.htm",
+   "data": "2026-10-10",
+   "fonte": "Subito",
+   "testo": "CAMERIERE/A - | INFINITY PUB PIZZERIA\n\nInfinity Pub Pizzeria cerca un/una cameriere/a da inserire nel proprio staff.\n\nLa figura si occuperà di:\n\n* Accoglienza clienti, raccolta ordinazioni e servizio ai tavoli.\n* Riordino e pulizia delle postazioni di lavoro.\n\nCerchiamo una persona seria, puntuale e dinamica, con cortesia verso i clienti e capacità di lavorare in squadra. È gradita esperienza nella ristorazione o in mansioni simili.\n\nOrari:\n17:30 23:00\n\nPer candidarti, rispondi direttamente all'annuncio inviando il curriculum oppure una breve presentazione con le tue esperienze, la disponibilità e un recapito telefonico.\n[ contatto] \n393/0362700",
+   "id": "https://www.subito.it/offerte-lavoro/cameriere-a-pizzaiolo-treviso-599929057.htm",
+   "prima_vista": "2026-10-11",
+   "protette": false,
+   "punteggio": 0,
+   "motivo": "Ruolo di cameriere/pizzaiolo, non corrisponde alle tue competenze d'ufficio.",
    "richiede_inglese": false,
    "punteggio_ai": true
   }
