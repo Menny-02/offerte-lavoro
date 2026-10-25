@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-24T09:18:30+00:00",
+ "aggiornato": "2026-10-25T09:35:27+00:00",
  "fonti": {
-  "LinkedIn": "ok 163",
+  "LinkedIn": "ok 224",
   "Indeed": "ok 21",
   "ClicLavoro Veneto": "ok 72",
   "Subito": "ok 200"
@@ -3320,22 +3320,6 @@
    "punteggio_ai": true
   },
   {
-   "titolo": "Addetti a funzioni di segreteria",
-   "azienda": "",
-   "luogo": "TREVISO (TV)",
-   "url": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/534846",
-   "data": "2026-09-24",
-   "fonte": "ClicLavoro Veneto",
-   "testo": "Descrizione qualifica \n Si richiedono: Qualifica professionale per il commercio - Addetto contabilità azienda; esperienza pregressa (1 anno); Buona conoscenza Lingua Italiana; Conoscenza di base di economia; Precisione e puntualità nel rispetto delle scadenze; Buone capacità organizzative; Voglia di imparare e di mettersi in gioco; Serietà, affidabilità e attitudine al lavoro. Si propone iniziale inserimento con Tirocinio part-time 8:00 -12:00, con previsione della relativa Indennità di stage. Inquadramento contrattuale per analogo profilo professionale: CCNL 0780 - COMMERCIO - Confcommercio - Impiegato d'ordine - RAL 17.000 \n Con esperienza \n Sì\n Sede \n TREVISO\n (TV)\n Data pubblicazione \n 24 settembre 2026\n Tipo di rapporto di lavoro offerto \n Lavoro a termine\n Lingue richieste \n ITALIANO\n Istruzione \n Addetto contabilità azienda\n CCNL\n COMMERCIO - Confcommercio\n RAL\n 17.000 €\n Intermediata da \n Ambito Provinciale - Centro per l'Impiego di Treviso",
-   "id": "https://cpi-lavoratore.cliclavoroveneto.it/cpi/ricercaOfferte/show/534846",
-   "prima_vista": "2026-10-03",
-   "protette": false,
-   "punteggio": 50,
-   "motivo": "Posizione di segreteria con tirocinio è adatta al tuo background amministrativo.",
-   "richiede_inglese": false,
-   "punteggio_ai": true
-  },
-  {
    "titolo": "Stage formativo e apprendistato impiegata manager",
    "azienda": "",
    "luogo": "Mogliano Veneto (TV)",
@@ -6552,6 +6536,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Advanced Procurement Internship",
+   "azienda": "Körber Technologies",
+   "luogo": "Paese, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4481683638",
+   "data": "2026-10-23",
+   "fonte": "LinkedIn",
+   "testo": "Il tuo ruolo \n Per potenziare la nostra area Operations, stiamo cercando una risorsa da inserire in stage che fornirà supporto operativo al team nelle attività di analisi e stima dei costi relativi a macchine, gruppi di macchine e linee produttive. Inoltre, la risorsa sarà di supporto per l’alimentazione del nuovo strumento di costificazione. La risorsa collaborerà con diverse funzioni aziendali, tra cui Sales, Engineering, Acquisti e Produzione, contribuendo alla definizione delle valutazioni economiche delle offerte commerciali.\n Nello specifico, si occuperà di:\n Supportare il team Advanced Procurement nell'analisi preliminare dei costi delle macchine da realizzare, sulla base delle informazioni tecniche fornite dai reparti Sales ed Engineering; \n Collaborare alla raccolta e all'organizzazione dei dati tecnici necessari alla definizione delle stime di costo;\n Affiancare il team nell'analisi delle specifiche tecniche, dei layout e delle configurazioni di prodotto per la determinazione dei costi di materiali e manodopera;\n Supportare la configurazione del nuovo tool aziendale;\n Supportare la richiesta e il confronto di preventivi per lavorazioni meccaniche, componenti e forniture esterne;\n Contribuire all'elaborazione di preventivi di costo per nuove soluzioni e progetti, collaborando alla valorizzazione delle principali voci di spesa;\n Supportare l'aggiornamento e la verifica dei dati tecnici ed economici all'interno dei sistemi aziendali;\n Collaborare con le diverse funzion",
+   "id": "advancedprocurementinternship|korbertechnologies|paese",
+   "prima_vista": "2026-10-25",
+   "protette": false,
+   "punteggio": 30,
+   "motivo": "È uno stage, non corrisponde alla tua esperienza consolidata.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Promoter in Team – Formazione Garantita",
    "azienda": "LOA MARKETING",
    "luogo": "Treviso, Veneto, Italy",
@@ -7848,6 +7848,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Business coach",
+   "azienda": "Consulenteideale",
+   "luogo": "Treviso, Veneto, Italy",
+   "url": "https://www.linkedin.com/jobs/view/4483329114",
+   "data": "2026-10-24",
+   "fonte": "LinkedIn",
+   "testo": "",
+   "id": "businesscoach|consulenteideale|treviso",
+   "prima_vista": "2026-10-25",
+   "protette": false,
+   "punteggio": 20,
+   "motivo": "Il ruolo di business coach non è affine alle tue competenze amministrative.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "Tecnico manutentore caldaie",
    "azienda": "",
    "luogo": "Treviso (TV)",
@@ -8040,6 +8056,22 @@
    "punteggio_ai": true
   },
   {
+   "titolo": "Agenti Immobiliari",
+   "azienda": "",
+   "luogo": "Treviso (TV)",
+   "url": "https://www.subito.it/offerte-lavoro/agenti-immobiliari-treviso-665735960.htm",
+   "data": "2026-10-24",
+   "fonte": "Subito",
+   "testo": "Immobildream seleziona Agenti Immobiliari con un’ottima esperienza maturata nelle acquisizioni e nelle vendite di immobili di prestigio per i nostri uffici di Cortina d’Ampezzo.\nAgli Agenti Immobiliari offriamo:\n-Euro 1.500,00 mensili\n-Provvigioni del 50% sul fatturato prodotto.\nEntrare in Immobildream significa lavorare con un leader consolidato del mercato immobiliare, con uffici prestigiosi, in un ambiente moderno, elegante e rappresentativo.\nMettiamo a disposizione degli Agenti Immobiliari:\n-campagne di lead generation rivolte a proprietari interessati a vendere\n-importanti investimenti pubblicitari\n-presenza con extra visibilità sui principali portali immobiliari e sui social media \n-servizi fotografici, video e virtual tour professionali, per gli immobili acquisiti,\n-zona operativa riservata.\nPer fissare un colloquio, invia il tuo curriculum a immobildream@immobildream.it oppure scrivi su WhatsApp al ###phonenumber###",
+   "id": "https://www.subito.it/offerte-lavoro/agenti-immobiliari-treviso-665735960.htm",
+   "prima_vista": "2026-10-25",
+   "protette": false,
+   "punteggio": 15,
+   "motivo": "L’attività di agente immobiliare è vendita esterna, non è il tuo profilo.",
+   "richiede_inglese": false,
+   "punteggio_ai": true
+  },
+  {
    "titolo": "19211 - Pressopiegatore",
    "azienda": "",
    "luogo": "Treviso (TV)",
@@ -8212,22 +8244,6 @@
    "protette": false,
    "punteggio": 10,
    "motivo": "Lavoro di pulizia, non pertinente al tuo profilo commerciale.",
-   "richiede_inglese": false,
-   "punteggio_ai": true
-  },
-  {
-   "titolo": "Addetto/a pulizie |Mogliano Veneto (TV)",
-   "azienda": "",
-   "luogo": "Mogliano Veneto (TV)",
-   "url": "https://www.subito.it/offerte-lavoro/addetto-a-pulizie-mogliano-veneto-tv-treviso-662020473.htm",
-   "data": "2026-09-24",
-   "fonte": "Subito",
-   "testo": "Per importante Cliente siamo alla ricerca di un/una Addetto/a alle Pulizie Industriali da inserire presso ente pubblico a Mogliano Veneto(TV). Attività: Pulizia ordinaria e straordinaria degli ambienti; Pulizia e igienizzazione di pavimenti, superfici, arredi, vetri e servizi igienici; Svuotamento cestini e corretta gestione dei rifiuti; Riordino degli ambienti assegnati; Utilizzo di prodotti, attrezzature e macchinari professionali per le pulizie; Rispetto delle procedure operative e delle norme di sicurezza. Requisiti: Preferibile esperienza, anche breve, nelle pulizie civili, multiservizi o in contesti analoghi come negozi, GDO, hotel, uffici o strutture sanitarie; Precisione, affidabilità e puntualità; Capacità di lavorare in autonomia; Disponibilità immediata e flessibilità oraria; Essere automuniti comunque autonomi nel raggiungere il luogo di lavoro. Cosa offriamo: Contratto a tempo determinato di 2 mesi, con possibilità di successiva di proroga; CCNL Multiservizi - Qualifica Operaio, 2° livello; Orario Part-time di 8.30 ore settimanali dal lunedi al Giovedi dalle 08:00 alle 09:30 il venerdi dalle 08:00 alle 10:30; Possibilità di incremento dell'orario presso altri cantieri; Affiancamento iniziale e formazione operativa. Per il part-time la retribuzione sarà riproporzionata in base all'orario di lavoro. Eventuali maggiorazioni saranno riconosciute secondo quanto previsto dal CCNL applicato.",
-   "id": "https://www.subito.it/offerte-lavoro/addetto-a-pulizie-mogliano-veneto-tv-treviso-662020473.htm",
-   "prima_vista": "2026-10-03",
-   "protette": false,
-   "punteggio": 10,
-   "motivo": "Pulizie industriali, non corrisponde alle tue competenze di front/back office.",
    "richiede_inglese": false,
    "punteggio_ai": true
   },
